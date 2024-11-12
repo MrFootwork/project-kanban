@@ -1,0 +1,27 @@
+#sidebar {
+	width: 20%;
+	height: calc(100vh - 2 * var(--navbar-height));
+
+  box-shadow: -10px 10px 15px 2px black;
+
+	& ul {
+		width: 100%;
+		list-style: none;
+		padding: 0;
+
+		& li {
+			width: 100%;
+			border-bottom: 1px solid var(--app-background-color);
+			padding: 0.4rem;
+
+			display: flex;
+			justify-content: center;
+
+			& a {
+        font-size: 1.5rem;
+				text-decoration: none;
+        color: var(--app-background-color);
+			}
+		}
+	}
+}

@@ -1,11 +1,17 @@
 :root {
-  --app-background-color: burlywood
+	--app-background-color: darkgoldenrod;
+  --font-color: black;
+	--navbar-height: 10vh;
 }
 
 body {
-  width: 100vw;
+	width: 100vw;
   height: 100vh;
 
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  font-size: 16px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 16px;
+}
+
+h1 {
+	font-size: 3rem;
 }

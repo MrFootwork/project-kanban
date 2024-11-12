@@ -1,9 +1,9 @@
 .navbar {
-    height: 10vh;
+    height: var(--navbar-height);
     display: flex;
     justify-content: space-between;
     padding: 0.5% 3% ;
-    background-color :darkgoldenrod;
+    background-color :var(--app-background-color);
 }
 
 #logo {
@@ -11,6 +11,5 @@
 }
 
 #app-name {
-    font-size: 250%;
-    width: 10%;
+    font-size: 3rem;
 }

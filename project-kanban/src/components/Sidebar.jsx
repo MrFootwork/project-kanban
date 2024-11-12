@@ -2,7 +2,12 @@ import '../assets/css/Sidebar.css'
 
 const Sidebar = () => {
   return (
-    <div>Sidebar</div>
+    <aside id='sidebar'>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/">About</a></li>
+      </ul>
+    </aside>
   )
 }
 
