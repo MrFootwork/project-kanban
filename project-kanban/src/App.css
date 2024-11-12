@@ -2,6 +2,7 @@
   --app-background-color: red
 }
 
-#navbar {
-  background-color: var(--app-background-color);
+body {
+  width: 100vw;
+  height: 100vh;
 }
