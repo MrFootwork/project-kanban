@@ -12,6 +12,26 @@ body {
 	font-size: 16px;
 }
 
+#root {
+	height: 100vh;
+	display: grid;
+  grid-template-columns: clamp(10rem, 20%, 20rem) 1fr;
+  grid-template-rows: var(--navbar-height) 1fr var(--navbar-height);
+  grid-template-areas: 
+    "navbar navbar"
+    "sidebar content"
+    "footer footer";
+}
+
 h1 {
 	font-size: 3rem;
+}
+
+
+#listContainer {
+display: flex;
+justify-content: center;
+gap: 1rem;
+
+padding: 1rem;
 }
