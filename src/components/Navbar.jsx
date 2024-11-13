@@ -1,4 +1,4 @@
-import '../assets/css/Navbar.css' ;
+import '../styles/Navbar.css';
 import logoImage from '../assets/images/logo.png';
 
 
