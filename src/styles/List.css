@@ -1,4 +1,6 @@
 #listComponent {
+	margin-bottom: auto;
+
 	& > h3 {
 		background-color: lightgrey;
 		border-top-left-radius: var(--border-radius-list);

@@ -3,12 +3,12 @@ li.list-item {
 	border-radius: 5px;
 	padding: 0.5rem;
 
+	& h4 {
+		color: var(--app-background-color);
+	}
+
 	& a {
 		text-decoration: none;
 		color: var(--font-color-black);
-
-		& h4 {
-			color: var(--app-background-color);
-		}
 	}
 }
