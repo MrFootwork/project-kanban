@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import '../styles/ListItem.css';
 
-const ListItem = ({ task, onDelete }) => {
+const ListItem = ({ task, deleteItem }) => {
 	return (
 		<li className='list-item'>
 			<Link to={`/tasks/${task.id}`}>
@@ -13,7 +13,7 @@ const ListItem = ({ task, onDelete }) => {
 				<p>{task.createdDate}</p>
 				<p>{task.dueDate}</p>
 			</Link>
-			<button onClick={() => onDelete(task.id)}>Delete</button>
+			<button onClick={() => deleteItem(task.id)}>Delete</button>
 		</li>
 	);
 };
