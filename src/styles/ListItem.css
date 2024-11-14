@@ -1,4 +1,14 @@
 li.list-item {
-  background-color: beige;
-  border-radius: 5px;
+	background-color: beige;
+	border-radius: 5px;
+	padding: 0.5rem;
+
+	& a {
+		text-decoration: none;
+		color: var(--font-color-black);
+
+		& h4 {
+			color: var(--app-background-color);
+		}
+	}
 }

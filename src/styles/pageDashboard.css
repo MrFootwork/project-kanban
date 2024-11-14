@@ -1,0 +1,9 @@
+#listContainer {
+	grid-area: page;
+
+	display: flex;
+	justify-content: center;
+	gap: 0.5rem;
+
+	padding: 1rem;
+}

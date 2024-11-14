@@ -1,7 +1,7 @@
 #sidebar {
 	grid-area: sidebar;
 
-  box-shadow: -10px 10px 15px 2px black;
+	box-shadow: -10px 10px 15px 2px black;
 
 	& ul {
 		width: 100%;
@@ -17,9 +17,11 @@
 			justify-content: center;
 
 			& a {
-        font-size: 1.5rem;
+				width: 100%;
+				text-align: center;
+				font-size: 1.5rem;
 				text-decoration: none;
-        color: var(--app-background-color);
+				color: var(--app-background-color);
 			}
 		}
 	}

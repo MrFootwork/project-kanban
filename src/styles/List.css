@@ -1,9 +1,22 @@
-#list {
-	list-style: none;
-  background-color: grey;
-  padding: 1rem;
+#listComponent {
+	& > h3 {
+		background-color: lightgrey;
+		border-top-left-radius: var(--border-radius-list);
+		border-top-right-radius: var(--border-radius-list);
 
-  display: flex;
-  flex-direction: column;
-  gap: .5rem;
+		padding-left: 1rem;
+	}
+
+	#list {
+		list-style: none;
+		background-color: grey;
+		padding: 0.75rem;
+
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+
+		border-bottom-left-radius: var(--border-radius-list);
+		border-bottom-right-radius: var(--border-radius-list);
+	}
 }

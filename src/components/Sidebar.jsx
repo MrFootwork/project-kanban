@@ -1,14 +1,19 @@
+import { Link } from 'react-router-dom';
 import '../styles/Sidebar.css';
 
 const Sidebar = () => {
-  return (
-    <aside id='sidebar'>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/">About</a></li>
-      </ul>
-    </aside>
-  )
-}
+	return (
+		<aside id='sidebar'>
+			<ul>
+				<li>
+					<Link to={'/'}>Dashboard</Link>
+				</li>
+				<li>
+					<Link to={'/about'}>About</Link>
+				</li>
+			</ul>
+		</aside>
+	);
+};
 
-export default Sidebar
+export default Sidebar;
