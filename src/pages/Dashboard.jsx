@@ -19,7 +19,9 @@ const Dashboard = ({ list, setList }) => {
 		if (activeId !== overId) {
 			setList(prevList =>
 				prevList.map(task =>
-					task.id === activeId ? { ...task, status: overId } : task
+					task.id === activeId && task.status !== overId
+						? { ...task, status: overId }
+						: task
 				)
 			);
 		}
