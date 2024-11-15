@@ -21,6 +21,7 @@ const ListItem = ({ task, deleteItem }) => {
 			{...listeners}
 			{...attributes}
 		>
+			{/* BUG drag and release on same list triggers page reload on link destination */}
 			<Link to={`/task/${task.id}`}>
 				<h4>{task.title}</h4>
 				<p>{task.description}</p>
