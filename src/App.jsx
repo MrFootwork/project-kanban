@@ -18,8 +18,6 @@ import Footer from './components/Footer';
 function App() {
 	const [list, setList] = useState(tasks);
 
-	const deleteItem = id => setList(list.filter(item => item.id !== id));
-
 	return (
 		<>
 			<Navbar />
@@ -27,11 +25,8 @@ function App() {
 			<Footer />
 
 			<Routes>
-				<Route
-					path='/'
-					element={<Dashboard list={list} deleteItemHandler={deleteItem} />}
-				/>
-				<Route path='/tasks/:taskID' element={<TaskDetails list={list} />} />
+				<Route path='/' element={<Dashboard list={list} setList={setList} />} />
+				<Route path='/task/:taskID' element={<TaskDetails list={list} />} />
 				<Route path='/about' element={<About />} />
 				<Route path='*' element={<NotFound />} />
 			</Routes>

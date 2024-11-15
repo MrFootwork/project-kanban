@@ -7,8 +7,10 @@ const Footer = () => {
 				Made with <span className='fa fa-heart' /> by Malek and Pandau.
 			</p>
 			<p>
-				To visit our repo click{' '}
-				<a href='https://github.com/MrFootwork/project-kanban'>here</a>.
+				Visit our repo{' '}
+				<a href='https://github.com/MrFootwork/project-kanban'>
+					<i className='fab fa-github-alt'></i>
+				</a>
 			</p>
 		</div>
 	);

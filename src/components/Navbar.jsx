@@ -1,14 +1,13 @@
 import '../styles/Navbar.css';
 import logoImage from '../assets/images/logo.png';
 
-
 const Navbar = () => {
-  return (
-    <div className='navbar'>
-      <img id="logo" src={logoImage} alt='Logo Image' />
-      <h1 id='app-title'>kannab</h1>
-    </div>
-  )
-}
+	return (
+		<nav className='navbar'>
+			<img id='logo' src={logoImage} alt='Logo Image' />
+			<h1 id='appTitle'>kannab</h1>
+		</nav>
+	);
+};
 
-export default Navbar
+export default Navbar;

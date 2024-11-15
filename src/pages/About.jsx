@@ -1,5 +1,7 @@
+import '../styles/pageAbout.css';
+
 const About = () => {
-	return <div>About</div>;
+	return <div id='pageAbout'>About</div>;
 };
 
 export default About;
