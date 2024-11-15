@@ -11,4 +11,12 @@ li.list-item {
 		text-decoration: none;
 		color: var(--font-color-black);
 	}
+
+	& i {
+		cursor: pointer;
+
+		&:hover {
+			color: red;
+		}
+	}
 }

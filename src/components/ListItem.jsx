@@ -30,7 +30,7 @@ const ListItem = ({ task, deleteItem }) => {
 				<p>{task.createdDate}</p>
 				<p>{task.dueDate}</p>
 			</Link>
-			<button onClick={() => deleteItem(task.id)}>Delete</button>
+			<i className={'fa fa-trash'} onClick={() => deleteItem(task.id)} />
 		</li>
 	);
 };

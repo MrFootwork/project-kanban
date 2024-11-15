@@ -19,10 +19,7 @@ const List = ({ list, setList, filterOnStatus }) => {
 	};
 
 	// Define deleteItem() and pass it to ListItem component
-	const deleteItem = id => {
-		console.log('Deleting!');
-		setList(list.filter(item => item.id !== id));
-	};
+	const deleteItem = id => setList(list.filter(item => item.id !== id));
 
 	return (
 		<div id='listComponent' style={overStyle}>
