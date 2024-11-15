@@ -1,5 +1,7 @@
+import '../styles/pageNotFound.css';
+
 const NotFound = () => {
-	return <div>NotFound</div>;
+	return <div id='pageNotFound'>NotFound</div>;
 };
 
 export default NotFound;

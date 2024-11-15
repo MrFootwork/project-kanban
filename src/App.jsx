@@ -26,7 +26,7 @@ function App() {
 
 			<Routes>
 				<Route path='/' element={<Dashboard list={list} setList={setList} />} />
-				<Route path='/tasks/:taskID' element={<TaskDetails list={list} />} />
+				<Route path='/task/:taskID' element={<TaskDetails list={list} />} />
 				<Route path='/about' element={<About />} />
 				<Route path='*' element={<NotFound />} />
 			</Routes>
