@@ -1,4 +1,91 @@
 #pageAbout {
 	grid-area: page;
 	padding: 1rem;
+	padding-top: 3rem;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: center;
+	gap: 3rem;
+
+	--inner-width: 70%;
+
+	& #aboutProject {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: center;
+		gap: 2rem;
+
+		width: 100%;
+
+		& p {
+			width: var(--inner-width);
+		}
+	}
+
+	& #aboutStudents {
+		display: flex;
+		justify-content: space-around;
+		gap: 1rem;
+
+		width: var(--inner-width);
+
+		& .about-student {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			gap: 1rem;
+
+			& .about-image-container {
+				width: 10rem;
+				aspect-ratio: 1;
+				border-radius: 50%;
+				overflow: hidden;
+
+				& > img {
+					object-fit: cover;
+					object-position: 20% 50%;
+				}
+			}
+
+			& p {
+				text-align: center;
+			}
+
+			& .about-student-link-container {
+				display: flex;
+				justify-content: space-between;
+
+				& div {
+					width: 10rem;
+					height: 3rem;
+					overflow: hidden;
+
+					display: flex;
+					justify-content: center;
+					align-items: center;
+
+					& img {
+						object-fit: cover;
+						object-position: 50% 50%;
+						width: 80%;
+
+						&.github {
+							object-fit: contain;
+							object-position: 50% 50%;
+							height: 80%;
+							aspect-ratio: 1;
+						}
+
+						&:hover {
+							transform: scale(1.2);
+						}
+					}
+				}
+			}
+		}
+	}
 }
