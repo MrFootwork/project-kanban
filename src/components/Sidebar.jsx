@@ -1,15 +1,21 @@
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import '../styles/Sidebar.css';
 
 const Sidebar = () => {
+	const addActiveLinkClass = ({ isActive }) => (isActive ? 'active-link' : '');
+
 	return (
 		<aside id='sidebar'>
 			<ul>
 				<li>
-					<Link to={'/'}>Dashboard</Link>
+					<NavLink to={'/'} className={addActiveLinkClass}>
+						Dashboard
+					</NavLink>
 				</li>
 				<li>
-					<Link to={'/about'}>About</Link>
+					<NavLink to={'/about'} className={addActiveLinkClass}>
+						About
+					</NavLink>
 				</li>
 			</ul>
 		</aside>
