@@ -12,17 +12,20 @@ const List = ({ list, setList, filterOnStatus }) => {
 	});
 
 	// Style applied on #listComponent when dragging over it
-	const style = {
+	const overStyle = {
 		outline: isOver ? '5px solid #1eb99d' : undefined,
 		outlineOffset: isOver ? '1px' : undefined,
 		borderRadius: isOver ? 'var(--border-radius-list)' : undefined,
 	};
 
 	// Define deleteItem() and pass it to ListItem component
-	const deleteItem = id => setList(list.filter(item => item.id !== id));
+	const deleteItem = id => {
+		console.log('Deleting!');
+		setList(list.filter(item => item.id !== id));
+	};
 
 	return (
-		<div id='listComponent' style={style}>
+		<div id='listComponent' style={overStyle}>
 			<h3>{filterOnStatus}</h3>
 
 			<ul id='list' ref={setNodeRef}>
