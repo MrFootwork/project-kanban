@@ -21,13 +21,25 @@ const List = ({ list, setList, filterOnStatus }) => {
 	// Define deleteItem() and pass it to ListItem component
 	const deleteItem = id => setList(list.filter(item => item.id !== id));
 
+	// Define editItem() and pass it to ListItem component
+	const editItem = id =>
+		setList(() => {
+			console.log('edit item: ', id);
+			return list;
+		});
+
 	return (
 		<div id='listComponent' style={overStyle}>
 			<h3>{filterOnStatus}</h3>
 
 			<ul id='list' ref={setNodeRef}>
 				{statusList.map(task => (
-					<ListItem key={task.id} task={task} deleteItem={deleteItem} />
+					<ListItem
+						key={task.id}
+						task={task}
+						deleteItem={deleteItem}
+						editItem={editItem}
+					/>
 				))}
 			</ul>
 		</div>

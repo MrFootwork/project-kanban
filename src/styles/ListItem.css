@@ -11,19 +11,34 @@ li.list-item {
 		}
 
 		& .description {
-			width: 20rem;
+			width: 15rem;
 			overflow: hidden;
 			white-space: nowrap;
 			text-overflow: ellipsis;
 		}
 	}
 
-	& i {
-		cursor: pointer;
+	& .icon-container {
+		display: flex;
+		justify-content: flex-start;
+		gap: 1rem;
 
-		&:hover {
-			color: red;
-			transform: scale(1.2);
+		& i.delete {
+			cursor: pointer;
+
+			&:hover {
+				color: red;
+				transform: scale(1.2);
+			}
+		}
+
+		& i.edit {
+			cursor: pointer;
+
+			&:hover {
+				color: orange;
+				transform: scale(1.2);
+			}
 		}
 	}
 }

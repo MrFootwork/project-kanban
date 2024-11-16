@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDraggable } from '@dnd-kit/core';
 import { CSS } from '@dnd-kit/utilities';
 
-const ListItem = ({ task, deleteItem }) => {
+const ListItem = ({ task, deleteItem, editItem }) => {
 	const navigate = useNavigate();
 
 	const { attributes, listeners, setNodeRef, transform } = useDraggable({
@@ -35,7 +35,13 @@ const ListItem = ({ task, deleteItem }) => {
 				<p>{task.dueDate}</p>
 			</div>
 
-			<i className={'fa fa-trash'} onClick={() => deleteItem(task.id)} />
+			<div className='icon-container'>
+				<i
+					className={'delete fa fa-trash'}
+					onClick={() => deleteItem(task.id)}
+				/>
+				<i className={'edit fas fa-edit'} onClick={() => editItem(task.id)} />
+			</div>
 		</li>
 	);
 };
