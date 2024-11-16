@@ -39,7 +39,7 @@ const Dashboard = ({ list, setList }) => {
 		<DndContext
 			collisionDetection={closestCorners}
 			sensors={sensors}
-			onDragEnd={handleDragEnd}
+			onDragEnd={e => handleDragEnd(e)}
 		>
 			<div id='listContainer'>
 				<List list={list} setList={setList} filterOnStatus='To Do' />

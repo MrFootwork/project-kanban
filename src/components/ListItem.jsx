@@ -1,9 +1,11 @@
 import '../styles/ListItem.css';
-import { Link } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { useDraggable } from '@dnd-kit/core';
 import { CSS } from '@dnd-kit/utilities';
 
 const ListItem = ({ task, deleteItem }) => {
+	const navigate = useNavigate();
+
 	const { attributes, listeners, setNodeRef, transform } = useDraggable({
 		id: task.id,
 	});
@@ -13,6 +15,8 @@ const ListItem = ({ task, deleteItem }) => {
 		transform: CSS.Translate.toString(transform),
 	};
 
+	const handleClick = () => navigate(`/task/${task.id}`);
+
 	return (
 		<li
 			className='list-item'
@@ -21,8 +25,7 @@ const ListItem = ({ task, deleteItem }) => {
 			{...listeners}
 			{...attributes}
 		>
-			{/* BUG drag and release on same list triggers page reload on link destination */}
-			<Link to={`/task/${task.id}`}>
+			<div className='details-container' onClick={handleClick}>
 				<h4>{task.title}</h4>
 				<p>{task.description}</p>
 				<p>{task.assignee}</p>
@@ -30,7 +33,8 @@ const ListItem = ({ task, deleteItem }) => {
 				<p>{task.priority}</p>
 				<p>{task.createdDate}</p>
 				<p>{task.dueDate}</p>
-			</Link>
+			</div>
+
 			<i className={'fa fa-trash'} onClick={() => deleteItem(task.id)} />
 		</li>
 	);
