@@ -27,7 +27,7 @@ const ListItem = ({ task, deleteItem }) => {
 		>
 			<div className='details-container' onClick={handleClick}>
 				<h4>{task.title}</h4>
-				<p>{task.description}</p>
+				<p className='description'>{task.description}</p>
 				<p>{task.assignee}</p>
 				<p>{task.status}</p>
 				<p>{task.priority}</p>
