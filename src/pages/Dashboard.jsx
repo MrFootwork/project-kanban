@@ -16,14 +16,8 @@ const Dashboard = ({ list, setList }) => {
 		const overId = over.id;
 
 		// Check if we are dropping in a different status list
-		if (activeId !== overId) {
-			setList(prevList =>
-				prevList.map(task =>
-					task.id === activeId && task.status !== overId
-						? { ...task, status: overId }
-						: task
-				)
-			);
+		if (activeId !== overId && task.status !== overId) {
+			setList(prevList => prevList.map(task => ({ ...task, status: overId })));
 		}
 	};
 
