@@ -48,9 +48,9 @@ const DialogTaskEdit = ({ dialogRef, editItem, taskToEdit, updateTask }) => {
 						value={taskToEdit.status}
 						onChange={updateTask}
 					>
-						<option value='To Do'>To Do</option>
-						<option value='In Progress'>In Progress</option>
-						<option value='Done'>Done</option>
+						<option value='To Do'>🔲 To Do</option>
+						<option value='In Progress'>🕐 In Progress</option>
+						<option value='Done'>✅ Done</option>
 					</select>
 				</div>
 
@@ -61,9 +61,9 @@ const DialogTaskEdit = ({ dialogRef, editItem, taskToEdit, updateTask }) => {
 						value={taskToEdit.priority}
 						onChange={updateTask}
 					>
-						<option value='High'>High</option>
-						<option value='Medium'>Medium</option>
-						<option value='Low'>Low</option>
+						<option value='High'>🟥 High</option>
+						<option value='Medium'>🟧 Medium</option>
+						<option value='Low'>🟦 Low</option>
 					</select>
 				</div>
 
