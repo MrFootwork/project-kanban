@@ -15,6 +15,19 @@ const ListItem = ({ task, deleteItem, openDialogTaskEdit }) => {
 		transform: CSS.Translate.toString(transform),
 	};
 
+	const priorityColor = {
+		backgroundColor: {
+			High: 'red',
+			Medium: 'orange',
+			Low: 'blue',
+		}[task.priority],
+	};
+
+	function getInitials() {
+		const initials = task.assignee.match(/\b[a-zA-Z]/g);
+		return initials ? initials.join('') : '';
+	}
+
 	return (
 		<li
 			className='list-item'
@@ -23,17 +36,17 @@ const ListItem = ({ task, deleteItem, openDialogTaskEdit }) => {
 			{...listeners}
 			{...attributes}
 		>
+			<div className='priority-indicator' style={priorityColor} />
+
 			<div
 				className='details-container'
 				onClick={() => navigate(`/task/${task.id}`)}
 			>
 				<h4>{task.title}</h4>
 				<p className='description'>{task.description}</p>
-				<p>{task.assignee}</p>
-				<p>{task.status}</p>
-				<p>{task.priority}</p>
-				<p>{task.createdDate}</p>
-				<p>{task.dueDate}</p>
+				<div className='assignee'>{getInitials()}</div>
+				<p>📃 {task.createdDate}</p>
+				<p>🎯 {task.dueDate}</p>
 			</div>
 
 			<div className='icon-container'>
