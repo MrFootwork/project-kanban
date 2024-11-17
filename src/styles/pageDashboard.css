@@ -6,4 +6,73 @@
 	gap: 0.5rem;
 
 	padding: 1rem;
+
+	& dialog.modal-edit[open] {
+		display: flex;
+		flex-direction: column;
+
+		position: absolute;
+		margin: 20vw auto 0;
+		border-radius: 5px;
+
+		& form {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			grid-template-rows: 1fr 6rem 1fr 1fr 1fr 0.25fr 0.5fr;
+			grid-template-areas:
+				'title title'
+				'description description'
+				'assignee created-date'
+				'status due-date'
+				'priority .'
+				'. .'
+				'change cancel';
+			gap: 0.25rem;
+
+			& label {
+				font-size: 0.75rem;
+				font-weight: 700;
+			}
+
+			& .input {
+				display: flex;
+				flex-direction: column;
+
+				& input,
+				& textarea,
+				& select {
+					border: 2px solid grey;
+					border-radius: 5px;
+				}
+
+				&.title {
+					grid-area: title;
+				}
+				&.description {
+					grid-area: description;
+				}
+				&.assignee {
+					grid-area: assignee;
+				}
+				&.status {
+					grid-area: status;
+				}
+				&.priority {
+					grid-area: priority;
+				}
+			}
+
+			& button.change {
+				grid-area: change;
+			}
+			& button.cancel {
+				grid-area: cancel;
+			}
+		}
+	}
+}
+
+.modal-edit::backdrop {
+	background-color: hsla(0, 0%, 0%, 0.1);
+	backdrop-filter: blur(2px);
 }
