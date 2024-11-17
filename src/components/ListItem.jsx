@@ -15,8 +15,6 @@ const ListItem = ({ task, deleteItem, openDialogTaskEdit }) => {
 		transform: CSS.Translate.toString(transform),
 	};
 
-	const handleClick = () => navigate(`/task/${task.id}`);
-
 	return (
 		<li
 			className='list-item'
@@ -25,7 +23,10 @@ const ListItem = ({ task, deleteItem, openDialogTaskEdit }) => {
 			{...listeners}
 			{...attributes}
 		>
-			<div className='details-container' onClick={handleClick}>
+			<div
+				className='details-container'
+				onClick={() => navigate(`/task/${task.id}`)}
+			>
 				<h4>{task.title}</h4>
 				<p className='description'>{task.description}</p>
 				<p>{task.assignee}</p>

@@ -18,7 +18,7 @@
 		& form {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
-			grid-template-rows: 1fr 6rem 1fr 1fr 1fr 0.25fr 0.5fr;
+			grid-template-rows: 1fr 6rem 1fr 1fr 1fr 0.125fr 0.5fr;
 			grid-template-areas:
 				'title title'
 				'description description'
@@ -62,11 +62,23 @@
 				}
 			}
 
-			& button.change {
-				grid-area: change;
-			}
-			& button.cancel {
-				grid-area: cancel;
+			& button {
+				cursor: pointer;
+				border-radius: 5px;
+				background-color: hsl(from var(--app-background-color) h s calc(l * 2));
+
+				&:hover {
+					background-color: hsl(from var(--app-background-color) h s calc(l));
+					color: white;
+				}
+
+				&.change {
+					grid-area: change;
+				}
+
+				&.cancel {
+					grid-area: cancel;
+				}
 			}
 		}
 	}
