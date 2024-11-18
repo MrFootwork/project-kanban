@@ -2,7 +2,7 @@ import '../styles/List.css';
 import { useDroppable } from '@dnd-kit/core';
 import ListItem from './ListItem';
 
-const List = ({ list, setList, filterOnStatus }) => {
+const List = ({ list, deleteItem, filterOnStatus, openDialogTaskEdit }) => {
 	// Create a filtered list to display ListItems for each of them
 	const statusList = list.filter(({ status }) => status === filterOnStatus);
 
@@ -18,16 +18,18 @@ const List = ({ list, setList, filterOnStatus }) => {
 		borderRadius: isOver ? 'var(--border-radius-list)' : undefined,
 	};
 
-	// Define deleteItem() and pass it to ListItem component
-	const deleteItem = id => setList(list.filter(item => item.id !== id));
-
 	return (
 		<div id='listComponent' style={overStyle}>
 			<h3>{filterOnStatus}</h3>
 
 			<ul id='list' ref={setNodeRef}>
 				{statusList.map(task => (
-					<ListItem key={task.id} task={task} deleteItem={deleteItem} />
+					<ListItem
+						key={task.id}
+						task={task}
+						deleteItem={deleteItem}
+						openDialogTaskEdit={openDialogTaskEdit}
+					/>
 				))}
 			</ul>
 		</div>

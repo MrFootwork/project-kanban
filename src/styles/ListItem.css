@@ -1,23 +1,69 @@
 li.list-item {
-	background-color: beige;
-	border-radius: 5px;
+	--border-radius: 5px;
+
+	position: relative;
+	background-color: hsl(from var(--app-background-color) h s 90%);
+	border-radius: var(--border-radius);
 	padding: 0.5rem;
+	padding-left: 1rem;
 
-	& h4 {
-		color: var(--app-background-color);
+	& .priority-indicator {
+		position: absolute;
+		top: 0;
+		left: 0;
+		height: 100%;
+		width: 0.5rem;
+		border-top-left-radius: var(--border-radius);
+		border-bottom-left-radius: var(--border-radius);
 	}
 
-	& a {
-		text-decoration: none;
-		color: var(--font-color-black);
-	}
-
-	& i {
+	& .details-container {
 		cursor: pointer;
 
-		&:hover {
-			color: red;
-			transform: scale(1.2);
+		& h4 {
+			color: var(--app-background-color);
+		}
+
+		& .description {
+			width: 15rem;
+			overflow: hidden;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+		}
+
+		& .assignee {
+			width: 2rem;
+			aspect-ratio: 1;
+			text-align: center;
+			line-height: 2rem;
+			color: white;
+			border-radius: 50%;
+			font-weight: 600;
+			background-color: hsl(from var(--app-background-color) h s calc(l * 0.9));
+		}
+	}
+
+	& .icon-container {
+		display: flex;
+		justify-content: flex-start;
+		gap: 1rem;
+
+		& i.delete {
+			cursor: pointer;
+
+			&:hover {
+				color: red;
+				transform: scale(1.2);
+			}
+		}
+
+		& i.edit {
+			cursor: pointer;
+
+			&:hover {
+				color: orange;
+				transform: scale(1.2);
+			}
 		}
 	}
 }
