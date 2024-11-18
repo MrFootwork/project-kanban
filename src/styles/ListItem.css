@@ -1,6 +1,8 @@
 li.list-item {
 	--border-radius: 5px;
 
+	list-style: none;
+
 	position: relative;
 	background-color: hsl(from var(--app-background-color) h s 90%);
 	border-radius: var(--border-radius);

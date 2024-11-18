@@ -5,12 +5,22 @@ import {
 	PointerSensor,
 	useSensor,
 	useSensors,
+	DragOverlay,
 } from '@dnd-kit/core';
 import List from '../components/List';
 import { useRef, useState } from 'react';
 import DialogTaskEdit from '../components/DialogTaskEdit';
+import ListItem from '../components/ListItem';
 
 const Dashboard = ({ list, setList }) => {
+	/******************************
+	 * 	Drag and Drop Handling
+	 *****************************/
+	const [activeId, setActiveId] = useState(null);
+
+	const handleDragStart = ({ active: { id: activeTaskID } }) =>
+		setActiveId(activeTaskID);
+
 	const handleDragEnd = ({ active, over }) => {
 		if (!over) return;
 
@@ -62,7 +72,7 @@ const Dashboard = ({ list, setList }) => {
 		setTaskToEdit(list.find(task => task.id === id));
 	};
 
-	// Define editItem() and pass it to ListItem component
+	// Define editItem() and pass it to editor in modal component
 	const editItem = e => {
 		e.preventDefault();
 		setList(list.map(task => (taskToEdit.id === task.id ? taskToEdit : task)));
@@ -74,6 +84,7 @@ const Dashboard = ({ list, setList }) => {
 			collisionDetection={closestCorners}
 			sensors={sensors}
 			onDragEnd={e => handleDragEnd(e)}
+			onDragStart={e => handleDragStart(e)}
 		>
 			<div id='listContainer'>
 				<DialogTaskEdit
@@ -101,6 +112,17 @@ const Dashboard = ({ list, setList }) => {
 					openDialogTaskEdit={openDialogTaskEdit}
 					filterOnStatus='Done'
 				/>
+
+				{/* This renders the active task item while dragging */}
+				<DragOverlay>
+					<ListItem
+						key={activeId}
+						task={list.find(task => task.id === activeId)}
+						deleteItem={deleteItem}
+						openDialogTaskEdit={openDialogTaskEdit}
+						isOverlay={true}
+					/>
+				</DragOverlay>
 			</div>
 		</DndContext>
 	);

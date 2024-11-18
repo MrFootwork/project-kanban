@@ -6,16 +6,23 @@
 	height: var(--navbar-height);
 
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
+	gap: 2rem;
 
 	padding: 0.5% 3%;
 	background-color: var(--app-background-color);
 }
 
-#logo {
-	height: 100%;
-}
+a {
+	align-self: center;
+	text-decoration: none;
+	color: var(--font-color);
 
-#appTitle {
-	font-size: 3rem;
+	& #logo {
+		height: 3rem;
+	}
+
+	& #appTitle {
+		font-size: 3rem;
+	}
 }
