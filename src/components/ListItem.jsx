@@ -1,18 +1,23 @@
 import '../styles/ListItem.css';
 import { useNavigate } from 'react-router-dom';
 import { useDraggable } from '@dnd-kit/core';
-import { CSS } from '@dnd-kit/utilities';
 
-const ListItem = ({ task, deleteItem, openDialogTaskEdit }) => {
+const ListItem = ({
+	task,
+	deleteItem,
+	openDialogTaskEdit,
+	isOverlay = false,
+}) => {
 	const navigate = useNavigate();
 
-	const { attributes, listeners, setNodeRef, transform } = useDraggable({
+	const { attributes, listeners, setNodeRef, isDragging } = useDraggable({
 		id: task.id,
 	});
 
+	// If this is the DragOverlay, make both the original ListItem
+	// and the overlay item semi-transparent.
 	const style = {
-		// Outputs `translate3d(x, y, 0)`
-		transform: CSS.Translate.toString(transform),
+		opacity: isDragging || isOverlay ? '0.8' : undefined,
 	};
 
 	const priorityColor = {
