@@ -18,6 +18,7 @@ const ListItem = ({
 	// and the overlay item semi-transparent.
 	const style = {
 		opacity: isDragging || isOverlay ? '0.8' : undefined,
+		boxShadow: isOverlay ? '2px 2px 10px 2px rgba(0, 0, 0, 0.5)' : undefined,
 	};
 
 	const priorityColor = {
