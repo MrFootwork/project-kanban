@@ -37,7 +37,7 @@ const About = () => {
 			<section id='aboutStudents'>
 				{students.map(student => {
 					return (
-						<section className='about-student'>
+						<section className='about-student' key={student.fullName}>
 							<div className='about-image-container'>
 								<img src={student.image} alt='' />
 							</div>
