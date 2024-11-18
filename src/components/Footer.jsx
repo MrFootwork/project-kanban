@@ -1,6 +1,9 @@
+import { openLinkInNewTab } from '../helper/utils';
 import '../styles/Footer.css';
 
 const Footer = () => {
+	const linkToGithubRepo = 'https://github.com/MrFootwork/project-kanban';
+
 	return (
 		<div id='footer'>
 			<p>
@@ -8,7 +11,7 @@ const Footer = () => {
 			</p>
 			<p>
 				Visit our repo{' '}
-				<a href='https://github.com/MrFootwork/project-kanban'>
+				<a onClick={() => openLinkInNewTab(linkToGithubRepo)}>
 					<i className='fab fa-github-alt'></i>
 				</a>
 			</p>

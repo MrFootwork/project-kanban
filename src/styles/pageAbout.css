@@ -9,6 +9,9 @@
 	align-items: center;
 	gap: 3rem;
 
+	overflow: scroll;
+	overflow-x: hidden;
+
 	--inner-width: 70%;
 
 	& #aboutProject {
@@ -16,12 +19,17 @@
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		gap: 2rem;
 
 		width: 100%;
 
 		& p {
+			margin-top: 2rem;
 			width: var(--inner-width);
+			text-align: center;
+
+			& span {
+				font-weight: 500;
+			}
 		}
 	}
 
@@ -35,7 +43,7 @@
 		& .about-student {
 			display: flex;
 			flex-direction: column;
-			justify-content: center;
+			justify-content: flex-start;
 			align-items: center;
 			gap: 1rem;
 
