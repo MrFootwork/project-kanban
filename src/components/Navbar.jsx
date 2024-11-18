@@ -1,11 +1,16 @@
 import '../styles/Navbar.css';
 import logoImage from '../assets/images/logo.png';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
 	return (
 		<nav className='navbar'>
-			<img id='logo' src={logoImage} alt='Logo Image' />
-			<h1 id='appTitle'>kannab</h1>
+			<Link to={'/'}>
+				<img id='logo' src={logoImage} alt='Logo Image' />
+			</Link>
+			<Link to={'/'}>
+				<h1 id='appTitle'>kannab</h1>
+			</Link>
 		</nav>
 	);
 };

@@ -13,11 +13,16 @@
 	background-color: var(--app-background-color);
 }
 
-#logo {
-	height: 3rem;
+a {
 	align-self: center;
-}
+	text-decoration: none;
+	color: var(--font-color);
 
-#appTitle {
-	font-size: 3rem;
+	& #logo {
+		height: 3rem;
+	}
+
+	& #appTitle {
+		font-size: 3rem;
+	}
 }
