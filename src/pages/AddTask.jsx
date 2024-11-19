@@ -56,107 +56,107 @@ function AddTask({ list, setList }) {
 	};
 
 	return (
-		<form onSubmit={handleSubmit} id='pageAddTask'>
-			<h2 className='input header'>Add a Task</h2>
+		<section id='pageAddTask'>
+			<h2 className='title'>Add a Task</h2>
 
-			<div className='input title'>
-				<label htmlFor='title'> Title : </label>
-				<input
-					name='title'
-					id='title'
-					type='text'
-					placeholrde='Title'
-					value={task.title}
-					onChange={handleTask}
-				/>
-			</div>
+			<form onSubmit={handleSubmit}>
+				<div className='input title'>
+					<label htmlFor='title'>Title</label>
+					<input
+						name='title'
+						id='title'
+						type='text'
+						placeholrde='Title'
+						value={task.title}
+						onChange={handleTask}
+					/>
+				</div>
 
-			<div className='input description'>
-				<label htmlFor='description'>Description : </label>
-				<textarea
-					name='description'
-					id='description'
-					rows='3'
-					type='text'
-					placeholder='Description'
-					value={task.description}
-					onChange={handleTask}
-				/>
-			</div>
+				<div className='input description'>
+					<label htmlFor='description'>Description</label>
+					<textarea
+						name='description'
+						id='description'
+						rows='3'
+						type='text'
+						placeholder='Description'
+						value={task.description}
+						onChange={handleTask}
+					/>
+				</div>
 
-			<div className='input assignee'>
-				<label htmlFor='assignee'>Assignee : </label>
-				<input
-					name='assignee'
-					id='assignee'
-					type='text'
-					placeholder='Assignee'
-					value={task.assignee}
-					onChange={handleTask}
-				/>
-			</div>
+				<div className='input assignee'>
+					<label htmlFor='assignee'>Assignee</label>
+					<input
+						name='assignee'
+						id='assignee'
+						type='text'
+						placeholder='Assignee'
+						value={task.assignee}
+						onChange={handleTask}
+					/>
+				</div>
 
-			<div className='input status'>
-				<label htmlFor='status'>Status : </label>
-				<select
-					name='status'
-					id='status'
-					placeholder='Status'
-					value={task.status}
-					onChange={handleTask}
-				>
-					<option value='To Do'>🔲 To Do</option>
-					<option value='In Progress'>🕐 In Progress</option>
-					<option value='Done'>✅ Done</option>
-				</select>
-			</div>
+				<div className='input status'>
+					<label htmlFor='status'>Status</label>
+					<select
+						name='status'
+						id='status'
+						placeholder='Status'
+						value={task.status}
+						onChange={handleTask}
+					>
+						<option value='To Do'>🔲 To Do</option>
+						<option value='In Progress'>🕐 In Progress</option>
+						<option value='Done'>✅ Done</option>
+					</select>
+				</div>
 
-			<div className='input priority'>
-				<label htmlFor='priority'>Priority : </label>
-				<select
-					name='priority'
-					id='priority'
-					value={task.priority}
-					onChange={handleTask}
-				>
-					<option value='High'>🟥 High</option>
-					<option value='Medium'>🟧 Medium</option>
-					<option value='Low'>🟦 Low</option>
-				</select>
-			</div>
+				<div className='input priority'>
+					<label htmlFor='priority'>Priority</label>
+					<select
+						name='priority'
+						id='priority'
+						value={task.priority}
+						onChange={handleTask}
+					>
+						<option value='High'>🟥 High</option>
+						<option value='Medium'>🟧 Medium</option>
+						<option value='Low'>🟦 Low</option>
+					</select>
+				</div>
 
-			<div className='input created-date'>
-				<label htmlFor='createdDate'>Created Date : </label>
-				<input
-					name='createdDate'
-					id='createdDate'
-					type='date'
-					placeholder='Created Date'
-					min={'2023-01-01'}
-					max={'2029-01-01'}
-					value={task.createdDate}
-					onChange={handleTask}
-				/>
-			</div>
+				<div className='input created-date'>
+					<label htmlFor='createdDate'>Created Date</label>
+					<input
+						name='createdDate'
+						id='createdDate'
+						type='date'
+						placeholder='Created Date'
+						min={'2023-01-01'}
+						max={'2029-01-01'}
+						value={task.createdDate}
+						onChange={handleTask}
+					/>
+				</div>
 
-			<div className='input due-date'>
-				<label htmlFor='dueDate'>Due Date : </label>
-				<input
-					name='dueDate'
-					id='dueDate'
-					type='date'
-					placeholder='Created Date'
-					min={'2023-01-01'}
-					max={'2029-01-01'}
-					value={task.dueDate}
-					onChange={handleTask}
-				/>
-			</div>
+				<div className='input due-date'>
+					<label htmlFor='dueDate'>Due Date</label>
+					<input
+						name='dueDate'
+						id='dueDate'
+						type='date'
+						placeholder='Created Date'
+						min={'2023-01-01'}
+						max={'2029-01-01'}
+						value={task.dueDate}
+						onChange={handleTask}
+					/>
+				</div>
 
-			<button type='submit' className='input addTask'>
-				Add Task
-			</button>
-		</form>
+				<button type='submit'>Add Task</button>
+			</form>
+		</section>
 	);
 }
 
