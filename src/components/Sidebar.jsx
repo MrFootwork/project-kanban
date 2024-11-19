@@ -22,6 +22,10 @@ const Sidebar = () => {
 						About
 					</NavLink>
 				</li>
+
+				<li>
+					<p>🍍</p>
+				</li>
 			</ul>
 		</aside>
 	);
