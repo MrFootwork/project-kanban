@@ -7,7 +7,8 @@ import { HashRouter as Router } from 'react-router-dom';
 
 createRoot(document.getElementById('root')).render(
 	<StrictMode>
-		<Router basename='/project-kanban'>
+		<Router>
+			{/* <Router basename='/project-kanban'> */}
 			<App />
 		</Router>
 	</StrictMode>
