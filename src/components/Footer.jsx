@@ -7,7 +7,7 @@ const Footer = () => {
 	return (
 		<div id='footer'>
 			<p>
-				Made with <span className='fa fa-heart' /> by Malek and Pandau.
+				Made with <span className='fa fa-heart' /> by Pandau and Malek.
 			</p>
 			<p>
 				Visit our repo{' '}

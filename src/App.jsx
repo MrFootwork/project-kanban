@@ -7,6 +7,7 @@ import { useState } from 'react';
 import tasks from './data/tasks.json';
 
 import Dashboard from './pages/Dashboard';
+import AddTask from './pages/AddTask';
 import TaskDetails from './pages/TaskDetails';
 import About from './pages/About';
 import NotFound from './pages/NotFound';
@@ -26,6 +27,7 @@ function App() {
 
 			<Routes>
 				<Route path='/' element={<Dashboard list={list} setList={setList} />} />
+				<Route path='/addnewtask' element={<AddTask list={list} setList={setList} />} />
 				<Route path='/task/:taskID' element={<TaskDetails list={list} />} />
 				<Route path='/about' element={<About />} />
 				<Route path='*' element={<NotFound />} />

@@ -2,6 +2,7 @@ import { Link } from 'react-router-dom';
 import '../styles/pageAbout.css';
 
 import studentImagePandau from '../assets/images/student-pandau.jpg';
+import studentImageMalek from '../assets/images/student-malek.png';
 import iconLinkedIn from '../assets/images/linkedin.png';
 import iconGitHub from '../assets/images/github.png';
 import { openLinkInNewTab } from '../helper/utils';
@@ -16,9 +17,9 @@ const students = [
 		github: 'https://github.com/MrFootwork',
 	},
 	{
-		image: 'https://picsum.photos/200',
+		image: studentImageMalek,
 		fullName: 'Malek',
-		intro: 'Lorem ipsum dolor sit amet consectetur adipisicing elit.',
+		intro: "Hi, I'm Malek, a web developer who sees the internet as a playground for creativity and innovation, armed with a keyboard and boundless curiosity.From dynamic features to sleek designs, every project is a blend of skill and imagination.I am always ready to tackle the next digital challenge",
 		linkedIn: '',
 		github: '',
 	},
