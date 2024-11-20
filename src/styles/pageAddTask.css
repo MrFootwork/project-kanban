@@ -1,44 +1,88 @@
 #pageAddTask {
-    grid-area: page;
-	padding: 1rem;
-    position: relative;
-    left: 20%;
+	grid-area: page;
+	position: relative;
 
-    display: flex;
+	width: 100%;
+	height: 100%;
+
+	display: flex;
 	flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-start;
-    width: 25vw;
-    height: 65vh;
-    gap: 1rem;
+	justify-content: flex-start;
+	align-items: center;
+
+	& h2.title {
+		margin: 2rem auto;
+	}
+
+	& form {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		grid-template-rows: 1fr 6rem 1fr 1fr 1fr 0.125fr 0.5fr;
+		grid-template-areas:
+			'title title'
+			'description description'
+			'assignee created-date'
+			'status due-date'
+			'priority .'
+			'. .'
+			'add-task add-task';
+		gap: 1rem;
+
+		& label {
+			font-size: 0.75rem;
+			font-weight: 700;
+		}
+
+		& .input {
+			display: flex;
+			flex-direction: column;
+
+			& input,
+			& textarea,
+			& select {
+				border: 2px solid grey;
+				border-radius: 5px;
+			}
+
+			&.title {
+				grid-area: title;
+			}
+
+			&.description {
+				grid-area: description;
+			}
+
+			&.assignee {
+				grid-area: assignee;
+			}
+
+			&.status {
+				grid-area: status;
+			}
+
+			&.priority {
+				grid-area: priority;
+			}
+		}
+
+		& button {
+			grid-area: add-task;
+
+			cursor: pointer;
+			border-radius: 5px;
+			background-color: hsl(from var(--app-background-color) h s calc(l * 2));
+
+			&:hover {
+				background-color: hsl(from var(--app-background-color) h s calc(l));
+				color: white;
+			}
+
+			&.change {
+			}
+
+			&.cancel {
+				grid-area: cancel;
+			}
+		}
+	}
 }
-
-.input {
-    display: flex;
-	flex-direction: row;
-    justify-content:space-between;
-    gap: 3rem ;
-    width: 100%;
-    font-weight: 700;
-   
-    
-    
-}
-
-.input.header {
-    justify-content:center;
-}
-
-.input.addTask {
-    margin-left: 25%;
-    width: 50%;
-    justify-content:center;
-  
-}
-
-
-
-
-
-
-

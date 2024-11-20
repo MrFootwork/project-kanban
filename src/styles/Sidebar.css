@@ -16,6 +16,10 @@
 			display: flex;
 			justify-content: center;
 
+			&:hover {
+				font-weight: 700;
+			}
+
 			& a {
 				width: 100%;
 				text-align: center;

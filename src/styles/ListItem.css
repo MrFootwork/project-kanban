@@ -10,6 +10,7 @@ li.list-item {
 	padding-left: 1rem;
 
 	& .priority-indicator {
+		margin: 0;
 		position: absolute;
 		top: 0;
 		left: 0;
@@ -34,6 +35,8 @@ li.list-item {
 		}
 
 		& .assignee {
+			margin: 0.25rem 0;
+
 			width: 2rem;
 			aspect-ratio: 1;
 			text-align: center;
@@ -43,12 +46,30 @@ li.list-item {
 			font-weight: 600;
 			background-color: hsl(from var(--app-background-color) h s calc(l * 0.9));
 		}
+
+		& .compact-details {
+			display: grid;
+			grid-template-columns: 3rem 1fr;
+			grid-template-areas: 'assignee dates' 'assignee dates';
+
+			& .assignee {
+				grid-area: assignee;
+				margin: auto;
+			}
+
+			& .dates {
+				grid-area: dates;
+				padding-left: 0.5rem;
+			}
+		}
 	}
 
 	& .icon-container {
 		display: flex;
 		justify-content: flex-start;
 		gap: 1rem;
+
+		margin-top: 0.25rem;
 
 		& i.delete {
 			cursor: pointer;

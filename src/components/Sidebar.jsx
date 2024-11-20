@@ -13,8 +13,8 @@ const Sidebar = () => {
 					</NavLink>
 				</li>
 				<li>
-					<NavLink to={'/addnewtask'} className={addActiveLinkClass}>
-						add new Task
+					<NavLink to={'/add-new-task'} className={addActiveLinkClass}>
+						Add New Task
 					</NavLink>
 				</li>
 				<li>
