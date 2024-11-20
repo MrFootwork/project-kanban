@@ -2,6 +2,8 @@
 	margin-bottom: auto;
 	transition: 0.1s all ease-out;
 
+	min-width: 288px;
+
 	& > h3 {
 		background-color: lightgrey;
 		border-top-left-radius: var(--border-radius-list);
@@ -13,6 +15,7 @@
 	#list {
 		background-color: grey;
 		padding: 0.75rem;
+		min-height: 184px;
 
 		display: flex;
 		flex-direction: column;
