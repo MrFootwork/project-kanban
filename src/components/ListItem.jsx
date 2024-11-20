@@ -50,9 +50,13 @@ const ListItem = ({
 			>
 				<h4>{task.title}</h4>
 				<p className='description'>{task.description}</p>
-				<div className='assignee'>{getInitials()}</div>
-				<p>📃 {task.createdDate}</p>
-				<p>🎯 {task.dueDate}</p>
+				<div className='compact-details'>
+					<div className='assignee'>{getInitials()}</div>
+					<div className='dates'>
+						<p>📃 {task.createdDate}</p>
+						<p>🎯 {task.dueDate}</p>
+					</div>
+				</div>
 			</div>
 
 			<div className='icon-container'>
