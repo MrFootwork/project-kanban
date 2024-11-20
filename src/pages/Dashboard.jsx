@@ -94,24 +94,15 @@ const Dashboard = ({ list, setList }) => {
 					updateTask={updateTask}
 				/>
 
-				<List
-					list={list}
-					deleteItem={deleteItem}
-					openDialogTaskEdit={openDialogTaskEdit}
-					filterOnStatus='To Do'
-				/>
-				<List
-					list={list}
-					deleteItem={deleteItem}
-					openDialogTaskEdit={openDialogTaskEdit}
-					filterOnStatus='In Progress'
-				/>
-				<List
-					list={list}
-					deleteItem={deleteItem}
-					openDialogTaskEdit={openDialogTaskEdit}
-					filterOnStatus='Done'
-				/>
+				{['To Do', 'In Progress', 'Done'].map(status => (
+					<List
+						key={status}
+						list={list}
+						deleteItem={deleteItem}
+						openDialogTaskEdit={openDialogTaskEdit}
+						filterOnStatus={status}
+					/>
+				))}
 
 				{/* This renders the active task item while dragging */}
 				<DragOverlay>
