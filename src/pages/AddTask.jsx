@@ -1,7 +1,10 @@
+import { useNavigate } from 'react-router-dom';
 import '../styles/pageAddTask.css';
 import React, { useState } from 'react';
 
 function AddTask({ list, setList }) {
+	const navigate = useNavigate();
+
 	const [task, setTask] = useState({
 		title: '',
 		description: '',
@@ -53,6 +56,8 @@ function AddTask({ list, setList }) {
 			createdDate: '2023-01-01',
 			dueDate: '2023-01-01',
 		});
+
+		navigate('/');
 	};
 
 	return (
