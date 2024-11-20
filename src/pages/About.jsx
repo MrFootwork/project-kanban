@@ -19,7 +19,8 @@ const students = [
 	{
 		image: studentImageMalek,
 		fullName: 'Malek',
-		intro: "Hi, I'm Malek, a web developer who sees the internet as a playground for creativity and innovation, armed with a keyboard and boundless curiosity.From dynamic features to sleek designs, every project is a blend of skill and imagination.I am always ready to tackle the next digital challenge",
+		intro:
+			"Hi, I'm Malek, a web developer who sees the internet as a playground for creativity and innovation, armed with a keyboard and boundless curiosity.From dynamic features to sleek designs, every project is a blend of skill and imagination.I am always ready to tackle the next digital challenge",
 		linkedIn: '',
 		github: '',
 	},
@@ -53,7 +54,7 @@ const About = () => {
 								<img src={student.image} alt='' />
 							</div>
 							<h3>{student.fullName}</h3>
-							<p>{student.intro}</p>
+							<p id='studentIntro'>{student.intro}</p>
 							<p>Visit me on</p>
 							<div className='about-student-link-container'>
 								<Link onClick={() => openLinkInNewTab(student.linkedIn)}>

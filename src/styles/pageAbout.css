@@ -35,10 +35,8 @@
 
 	& #aboutStudents {
 		display: flex;
-		justify-content: space-around;
-		gap: 1rem;
-
-		width: var(--inner-width);
+		flex-wrap: wrap;
+		justify-content: center;
 
 		& .about-student {
 			display: flex;
@@ -46,6 +44,9 @@
 			justify-content: flex-start;
 			align-items: center;
 			gap: 1rem;
+
+			width: 40%;
+			min-width: 20rem;
 
 			& .about-image-container {
 				width: 10rem;
@@ -59,8 +60,9 @@
 				}
 			}
 
-			& p {
+			& p#studentIntro {
 				text-align: center;
+				width: clamp(8rem, 80%, 20rem);
 			}
 
 			& .about-student-link-container {
