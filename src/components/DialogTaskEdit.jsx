@@ -44,6 +44,7 @@ const DialogTaskEdit = ({ dialogRef, editItem, taskToEdit, updateTask }) => {
 					<label htmlFor='status'>Status</label>
 					<select
 						name='status'
+						id='status'
 						placeholder='Status'
 						value={taskToEdit.status}
 						onChange={updateTask}
@@ -58,6 +59,7 @@ const DialogTaskEdit = ({ dialogRef, editItem, taskToEdit, updateTask }) => {
 					<label htmlFor='priority'>Priority</label>
 					<select
 						name='priority'
+						id='priority'
 						value={taskToEdit.priority}
 						onChange={updateTask}
 					>
@@ -71,6 +73,7 @@ const DialogTaskEdit = ({ dialogRef, editItem, taskToEdit, updateTask }) => {
 					<label htmlFor='createdDate'>Created Date</label>
 					<input
 						name='createdDate'
+						id='createdDate'
 						type='date'
 						placeholder='Created Date'
 						min={'2023-01-01'}
@@ -84,6 +87,7 @@ const DialogTaskEdit = ({ dialogRef, editItem, taskToEdit, updateTask }) => {
 					<label htmlFor='dueDate'>Due Date</label>
 					<input
 						name='dueDate'
+						id='dueDate'
 						type='date'
 						placeholder='Created Date'
 						min={'2023-01-01'}

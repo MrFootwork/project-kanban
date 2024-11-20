@@ -12,6 +12,17 @@ import { useRef, useState } from 'react';
 import DialogTaskEdit from '../components/DialogTaskEdit';
 import ListItem from '../components/ListItem';
 
+const defaultTask = {
+	id: '',
+	title: '',
+	description: '',
+	assignee: '',
+	status: '',
+	priority: '',
+	createdDate: '',
+	dueDate: '',
+};
+
 const Dashboard = ({ list, setList }) => {
 	/******************************
 	 * 	Drag and Drop Handling
@@ -56,7 +67,7 @@ const Dashboard = ({ list, setList }) => {
 	 *****************************/
 	const dialogRef = useRef(null);
 
-	const [taskToEdit, setTaskToEdit] = useState({});
+	const [taskToEdit, setTaskToEdit] = useState(defaultTask);
 
 	// Update Task state in dialog editor
 	const updateTask = e => {
