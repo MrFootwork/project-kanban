@@ -1,5 +1,6 @@
 #listComponent {
 	margin-bottom: auto;
+	transition: 0.1s all ease-out;
 
 	& > h3 {
 		background-color: lightgrey;

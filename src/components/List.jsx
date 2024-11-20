@@ -14,10 +14,11 @@ const List = ({ list, deleteItem, filterOnStatus, openDialogTaskEdit }) => {
 	// Style applied on #listComponent when dragging over it
 	const overStyle = {
 		outline: isOver
-			? '5px solid hsl(from var(--app-background-color) h 100% calc(l + 0.2))'
+			? '3px solid hsl(from var(--app-background-color) h 100% calc(l + 0.2))'
 			: undefined,
 		outlineOffset: isOver ? '1px' : undefined,
 		borderRadius: isOver ? 'var(--border-radius-list)' : undefined,
+		transform: isOver ? 'scale(1.01)' : undefined,
 	};
 
 	return (
